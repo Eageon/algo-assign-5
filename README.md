@@ -1,4 +1,4 @@
 algo-assign-5
 =============
 
-Algorithm assignment 5
+Algorithm Assignment 5

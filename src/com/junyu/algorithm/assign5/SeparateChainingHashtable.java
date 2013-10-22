@@ -4,15 +4,15 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 public class SeparateChainingHashtable {
-	private LinkedList<Integer>[] chainList;
+	private LinkedList<Integer>[] cellList;
 	private int tableSize;
 	public static final int DEFAULT_HASHTABLE_SIZE = 17;
 
 	public SeparateChainingHashtable(int size) {
 		tableSize = size;
-		chainList = new LinkedList[tableSize];
-		for (int i = 0; i < chainList.length; i++) {
-			chainList[i] = new LinkedList<>();
+		cellList = new LinkedList[tableSize];
+		for (int i = 0; i < cellList.length; i++) {
+			cellList[i] = new LinkedList<>();
 		}
 	}
 
@@ -27,7 +27,7 @@ public class SeparateChainingHashtable {
 	}
 
 	public void insert(int value) {
-		LinkedList<Integer> whichList = chainList[hash(value)];
+		LinkedList<Integer> whichList = cellList[hash(value)];
 
 		if (!whichList.contains(value)) {
 			whichList.add(value);
@@ -35,9 +35,9 @@ public class SeparateChainingHashtable {
 	}
 
 	public void showTable() {
-		for (int i = 0; i < chainList.length; i++) {
+		for (int i = 0; i < cellList.length; i++) {
 			System.out.print("Table " + i + ": ");
-			Iterator<Integer> itor = chainList[i].iterator();
+			Iterator<Integer> itor = cellList[i].iterator();
 			while(itor.hasNext())
 				System.out.print(itor.next() + " ");
 			System.out.println("");

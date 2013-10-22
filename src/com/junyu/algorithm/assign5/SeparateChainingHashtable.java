@@ -29,7 +29,7 @@ public class SeparateChainingHashtable {
 	public void insert(int value) {
 		LinkedList<Integer> whichList = chainList[hash(value)];
 
-		if (whichList.contains(value)) {
+		if (!whichList.contains(value)) {
 			whichList.add(value);
 		}
 	}

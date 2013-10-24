@@ -1,0 +1,31 @@
+CS 5343.002 Algorithm analysis and Data Structures
+Fall 2013
+Wed, Oct 16
+Assignment #5
+
+Due Thu, Oct 24 (in class)
+
+This is an individual or group assignment.  Submit written or typed answers.
+Answers should be your own work.
+
+
+1. Insert the following elements, in the given order, into a hash table
+   of size 17, that is initially empty.  Show the table after every 3 inserts:
+   [4371, 1323, 6173, 4199, 4344, 9679, 8472, 5001, 2220]
+
+   (a) Separate chaining
+   (b) Linear probing with h(x) = x mod 17.
+   (c) Double hashing with h1(x) = x mod 17, and h2(x) = x mod 7 + 1.
+   (d) Cuckoo hashing into 2 tables of 11 elements each, with
+       h1(x) = x mod 11, and h2(x) = y mod 11, where y is obtained
+       by a left circular shift of x (in decimal).  For e.g., x=4371, y=3714.
+
+2. Run buildheap on the following array:
+   A[1..15] = [10, 12, 1, 14, 6, 5, 8, 15, 3, 9, 7, 4, 11, 13, 2].
+   Show the heap (array) after every 3 calls to percolateDown.
+
+3. Run Insert(16) and then Insert(0) on the resulting heap.  Show the
+   heap after each Insert.  You need not show intermediate steps.
+
+4. Run DeleteMin two times on the resulting heap, and show the heap
+   after each DeleteMin.

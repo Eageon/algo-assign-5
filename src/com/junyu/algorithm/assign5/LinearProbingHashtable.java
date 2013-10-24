@@ -34,7 +34,7 @@ public class LinearProbingHashtable {
 		int hashVal = hash(value);
 
 		for (int i = 0; i < tableSize; i++) {
-			hashVal += i;
+			hashVal = (hashVal) + i % tableSize;
 			if (cellList.get(hashVal) == null) {
 				cellList.set(hashVal, value);
 				break;

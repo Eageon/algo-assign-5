@@ -21,9 +21,7 @@ public class SeparateChainingHashtable {
 	}
 
 	private int hash(int value) {
-		int hashVal = 0;
-		hashVal = value % tableSize;
-		return hashVal;
+		return value % tableSize;
 	}
 
 	public void insert(int value) {
